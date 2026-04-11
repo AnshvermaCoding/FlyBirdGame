@@ -98,7 +98,7 @@ let prevScore;
 let color;
 //localStorage.setItem("newGame","true");
 //localStorage.setItem("newGame2","true");
-if(localStorage.getItem("newGame") === "false") {
+if(!localStorage.getItem("newGame") === null) {
     console.log("new");
     newGame = "false";
     localStorage.setItem("newGame","false");
