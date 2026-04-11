@@ -123,8 +123,8 @@ if(!localStorage.getItem("newGame")) {
     localStorage.setItem("bird03","false");
     localStorage.setItem("bird04","false");
     localStorage.setItem("speed","Easy");
-    localStorage.setItem("soundIs","true");
-    localStorage.setItem("musicIs","true");
+    // localStorage.setItem("soundIs","true");
+   // localStorage.setItem("musicIs","true");
     //localStorage.setItem("vibrateIs","true");
 }
 
