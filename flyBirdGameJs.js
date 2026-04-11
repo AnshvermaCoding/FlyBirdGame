@@ -98,7 +98,7 @@ let prevScore;
 let color;
 //localStorage.setItem("newGame","true");
 //localStorage.setItem("newGame2","true");
-if(!localStorage.getItem("newGame")) {
+if(localStorage.getItem("newGame") === "false") {
     console.log("new");
     newGame = "false";
     localStorage.setItem("newGame","false");
@@ -123,9 +123,9 @@ if(!localStorage.getItem("newGame")) {
     localStorage.setItem("bird03","false");
     localStorage.setItem("bird04","false");
     localStorage.setItem("speed","Easy");
-    // localStorage.setItem("soundIs","true");
-   // localStorage.setItem("musicIs","true");
-    //localStorage.setItem("vibrateIs","true");
+    localStorage.setItem("soundIs","true");
+    localStorage.setItem("musicIs","true");
+    localStorage.setItem("vibrateIs","true");
 }
 
 navProfile.style.background = `url(${localStorage.getItem('profilePic')})`;
@@ -750,8 +750,10 @@ function resetGame() {
     buyBtn2.innerText = "BUY";
     buyBtn3.innerText = "BUY";
     buyBtn4.innerText = "BUY";
+    localStorage.setItem("newGame",null);
     setTimeout(() => { 
         message3.style.visibility = "hidden"; 
+        location.reload();
     },1000);
 }
 
