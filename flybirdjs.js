@@ -33,12 +33,6 @@ let backgroundEffect = document.querySelector("#backgroundEffect");
 let body = document.querySelector("body");
 let levelUp = document.querySelector("#levelUp");
 
-window.onpageshow = function(event) {
-  if(event.persisted) {
-    location.reload();
-  }
-}
-
 let topIs = "50";
 bird.style.top = "50%";
 bird.style.transition = "0.15s";
@@ -941,7 +935,7 @@ localStorage.setItem("currentScore",0);
 function back() {
   localStorage.setItem("saveScore",localStorage.getItem("currentScore"));
   //localStorage.setItem("saveScore",10000);
-  history.back();
+  window.location.href = "index.html";
 }
 // resume 
 
