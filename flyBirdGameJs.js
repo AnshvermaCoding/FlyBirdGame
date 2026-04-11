@@ -159,6 +159,7 @@ if(localStorage.getItem("save") === "true") {
 function startGame() {
     prevScore = localStorage.getItem("score2");
     window.location.href = "FlyBird.html";
+    location.reload();
 }
 shopBlock.style.transform = "scale(0.5)";
 optionBlock.style.transform = "scale(0.5)";
