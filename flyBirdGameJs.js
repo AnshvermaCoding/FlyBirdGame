@@ -55,6 +55,16 @@ let backgroundEffect = document.querySelector("#backgroundEffect");
 let newBlock1 = document.querySelector("#newBlockA");
 let newBlock2 = document.querySelector("#newBlockB");
 
+if(!localStorage.getItem("view"))  {
+    localStorage.setItem("view","true");
+}
+
+setInterval(() => {
+    if(localStorage.getItem("view") === "false") {
+        localStorage.setItem("view","true");
+        location.reload();
+    }
+},100);
 let sound = "true";
 let music = "true";
 let vibrate = "true";
