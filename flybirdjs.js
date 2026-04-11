@@ -936,6 +936,7 @@ function back() {
   localStorage.setItem("saveScore",localStorage.getItem("currentScore"));
   //localStorage.setItem("saveScore",10000);
   window.location.href = "index.html";
+  location.reload();
 }
 // resume 
 
