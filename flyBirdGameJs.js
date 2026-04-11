@@ -98,7 +98,7 @@ let prevScore;
 let color;
 //localStorage.setItem("newGame","true");
 //localStorage.setItem("newGame2","true");
-if(!localStorage.getItem("newGame") === null) {
+if(!localStorage.getItem("newGame")) {
     console.log("new");
     newGame = "false";
     localStorage.setItem("newGame","false");
@@ -750,10 +750,8 @@ function resetGame() {
     buyBtn2.innerText = "BUY";
     buyBtn3.innerText = "BUY";
     buyBtn4.innerText = "BUY";
-    localStorage.setItem("newGame",null);
     setTimeout(() => { 
         message3.style.visibility = "hidden"; 
-        location.reload();
     },1000);
 }
 
