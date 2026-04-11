@@ -33,6 +33,15 @@ let backgroundEffect = document.querySelector("#backgroundEffect");
 let body = document.querySelector("body");
 let levelUp = document.querySelector("#levelUp");
 
+
+setInterval(() => {
+    if(localStorage.getItem("view") === "true") {
+        localStorage.setItem("view","false");
+        location.reload();
+    }
+},100);
+
+
 let topIs = "50";
 bird.style.top = "50%";
 bird.style.transition = "0.15s";
