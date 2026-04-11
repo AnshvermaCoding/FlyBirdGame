@@ -1,4 +1,4 @@
-let shopBlock = document.querySelector("#shopBlock");
+ilet shopBlock = document.querySelector("#shopBlock");
 let optionBlock = document.querySelector("#optionBlock");
 let creditBlock = document.querySelector("#creditBlock");
 let settingBlock = document.querySelector("#settingBlock");
@@ -123,6 +123,9 @@ if(!localStorage.getItem("newGame")) {
     localStorage.setItem("bird03","false");
     localStorage.setItem("bird04","false");
     localStorage.setItem("speed","Easy");
+    localStorage.setItem("soundIs","true");
+    localStorage.setItem("musicIs","true");
+    localStorage.setItem("vibrateIs","true");
 }
 
 navProfile.style.background = `url(${localStorage.getItem('profilePic')})`;
