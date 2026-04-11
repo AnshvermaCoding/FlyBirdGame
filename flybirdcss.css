@@ -1,0 +1,360 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+}
+body {
+  overflow-x: hidden;
+}
+#navBar {
+  height: 6vh;
+  background-color: skyblue;
+  display: flex;
+  align-items: center; 
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  border-bottom: 0px solid black;
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+}
+#score {
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin: 0px 0px 0px 3.2rem;
+  color: darkslateblue;
+  /* 
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  border-radius: 40px;
+  background-color: aquamarine;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  */
+}
+#total {
+  height: 4rem;
+  width: 11rem;
+  position: absolute;
+  left: 78%;
+  padding: 1px;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7rem;
+  border-radius: 30px;
+  border: 0px solid black;
+  color: darkblue;
+  
+}
+.birds {
+  margin: 0 3px 0 3px;
+}
+#container {
+  border: 2px solid black;
+  /* background-color: rgba(100,100,255,0.25); */
+  background-size: cover;
+  z-index: 1;
+  height: 100vh;
+  position: relative;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#msg {
+  position: absolute; 
+  top: 45%;
+  left: 11.8%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  visibility: visible;
+  z-index: -1;
+}
+#bird {
+  height: 6%;
+  width: 8%;
+  border: 0px solid black;
+  position: absolute;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  font-size: 65px;
+  border-radius: 50%;
+  text-shadow: 0px 0px 10px rgba(255,255,255,1);
+  z-index: -1;
+  
+  border: 0px solid black;
+}
+.levels {
+  background-color: red;
+  position: absolute;
+  z-index: -3;
+  width: 8rem;
+  box-shadow: 0px 0px 10px rgba(255,255,255,1);
+}
+#level1 {
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+#level01 {
+  bottom: 0px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+#level2 {
+  height: 10rem;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+#level02 {
+  height: 50rem;
+  bottom: 0px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  z-index: -1;
+  
+}
+#level3 {
+  height: 50rem;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  
+}
+#level03 {
+  height: 10rem;
+  bottom: 0px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  z-index: -2;
+  
+}
+
+#footer {
+  height: 6vh;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkred;
+  font-size: 2.3rem;
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 0px solid black;
+}
+#footerLogo {
+  color: midnightblue;
+}
+#menu {
+  position: absolute;
+  left: 90%;
+  font-size: 3.7rem;
+  color: darkgreen;
+}
+#menu:active {
+  color: red;
+}
+#sound {
+  position: absolute;
+  left: 4%;
+  font-size: 3rem;
+  color: darkgreen;
+}
+#sound:active {
+  color: red;
+}
+#gameOver {
+  height: 17rem;
+  width: 35rem;
+  background-color: cornflowerblue;
+  position: absolute;
+  z-index: 5;
+  border-radius: 40px;
+  border: 2px solid black;
+  visibility: hidden;
+  top: 40%;
+  left: 21.5%;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+#gameOverMsg {
+  font-size: 4rem;
+  text-align: center;
+  color: cornsilk;
+  font-weight: bold;
+  margin-top: 1.6rem;
+}
+#restart {
+  height: 6rem;
+  width: 28rem;
+  margin: 4% 0 0 10%;
+  border-radius: 40px;
+  font-size: 3rem;
+  background-color: cyan;
+  color: darkblue;
+  
+}
+#restart:active { 
+  background-color: blueviolet;
+}
+#reGame {
+  height: 17rem;
+  width: 35rem;
+  position: absolute;
+  top: 40%;
+  left: 21.5%;
+  background-color: cyan;
+  z-index: 3;
+  border-radius: 40px;
+  border: 2px solid black;
+  visibility: hidden;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+#rePlayTime {
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+  font-size: 10rem;
+  font-weight: bold;
+  top: 45%;
+  left: 41.5%;
+  z-index: 1;
+  border: 0px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: darkblue;
+  text-shadow: 0px 0px 20px rgba(255,255,255,1);
+  visibility: hidden;
+}
+#totalBirds {
+  height: 5rem;
+  width: 18rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 24%;
+  padding: 0px;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border-radius: 50px;
+  border: 0px solid black;
+  color: darkblue;
+}
+.allBirds {
+  margin: 0 10px 0 10px;
+}
+.btns {
+  height: 6rem;
+  width: 15rem;
+  border-radius: 50px;
+  font-size: 3rem;
+  background-color: paleturquoise;
+  color: darkblue;
+  margin: 9rem 8px;
+}
+.btns:active { 
+  background-color: blueviolet;
+}
+#continue {
+  margin-left: 1.75rem;
+}
+#resumeScreen {
+  position: absolute;
+  top: 30%;
+  left: 17%;
+  z-index: 1;
+  height: 38rem;
+  width: 40rem;
+  border: 1px solid black;
+  border-radius: 40px;
+  background-color: aqua;
+  visibility: hidden;
+  z-index: 3;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+}
+#allBird {
+  height: 5rem;
+  width: 18rem;
+  position: absolute;
+  top: 3rem;
+  left: 27.7%;
+  padding: 0px;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border-radius: 50px;
+  border: 0px solid black;
+  color: darkblue;
+}
+.totalBird {
+  margin: 0 15px 0 15px;
+}
+.resumeScreenBtns {
+  height: 7rem;
+  width: 35rem;
+  border-radius: 80px;
+  position: relative;
+  top: 11rem;
+  left: 2.4rem;
+  font-size: 4rem;
+  background-color: lavender;
+  margin-bottom: 1rem;
+}
+.resumeScreenBtns:active {
+  background-color: aliceblue;
+}
+#resume {
+  display: block;
+}
+#restartGame {
+}
+#quitGame {
+  
+}
+#backgroundEffect {
+  height: 100vh; 
+  width: 100%;
+  background-color: rgba(0,0,0,0.2);
+  position: fixed;
+  top: 0;
+  transition: 0.5s ease;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+#levelUp {
+  position: absolute;
+  top: 20%;
+  height: 15rem;
+  width: 15rem;
+  border: 0px solid black;
+  z-index: 5;
+  left: 39%;
+  background-image: url(LevelUp.png);
+  background-size: cover;
+  transition: 1s ease;
+  display: none;
+}
+@media(max-height:1590px) {
+  
+}
+@media(min-height:1590px) {
+  #resumeScreen {
+    top: 32%;
+  }
+  #navBar {
+    height: 6vh;
+  }
+  #footer {
+    height: 6vh;
+  }
+}

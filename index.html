@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="user-scalable=no">
+  <title>Fly-Bird</title>
+  <link rel="stylesheet" href="FlyBirdStart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+  <section>
+  <div id="navBar">
+    <span id="scoreVal">
+      <span id="scores"><pre id="score">SCORE <span id="scoreValue">0</span></pre></span>
+      <div id="plusLogo"><i class="fa-solid fa-plus"></i></div></span>
+    <div id="profile" onclick="profile();"></div>
+  </div>
+  </section>
+  <section>
+    <div id="background">
+    </div> 
+    <div class="topControls" id="topControl1" onclick="privacy();"><i class="fa-solid fa-file-shield"></i></div>
+    <div class="topControls" id="topControl2" onclick="terms();"><i class="fa-solid fa-message"></i></div>
+    <img src="Logo2.png" id="logo">
+    <div id="logoBox"></div>
+    <div id="start" onclick="startGame();"></div>
+    <div id="controlBox">
+      <div id="control1" class="controls" onclick="shop();"><i class="fa-solid fa-cart-shopping"></i></div>
+      <div id="control2" class="controls" onclick="option();"><i class="fa-solid fa-gamepad" id="optionLogo"></i></div>
+      <div id="control3" class="controls" onclick="credit();"><!--<i class="fa-solid fa-bars" id="creditLogo"></i>--><i class="fa-solid fa-handshake" id="creditLogo"></i></div>
+      <div id="control4" class="controls" onclick="setting();"><i class="fa-solid fa-gear" id="settingLogo"></i></div>
+    </div>
+    <!-- SHOP -->
+    <div class="blocks" id="shopBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">SHOP</h2>
+      <div class="shopItems" id="item1">
+        <i class="fa-solid fa-dove birds" id="bird1"></i>
+        <p id="priceItem1" class="price">By Default</p>
+        <button id="buyBtn1" class="buyBtns" onclick="buyColor1();">USE</button>
+      </div>
+      <div class="shopItems" id="item2">
+        <i class="fa-solid fa-dove birds" id="bird2"></i>
+        <p id="priceItem2" class="price">400 score</p>
+        <button id="buyBtn2" class="buyBtns" onclick="buyColor2();">BUY</button>
+      </div>
+      <div class="shopItems" id="item3">
+        <i class="fa-solid fa-dove birds" id="bird3"></i>
+        <p id="priceItem4" class="price">800 score</p>
+        <button id="buyBtn3" class="buyBtns" onclick="buyColor3();">BUY</button>
+      </div>
+      <div class="shopItems" id="item4">
+        <i class="fa-solid fa-dove birds" id="bird4"></i>
+        <p id="priceItem4" class="price">1200 score</p>
+        <button id="buyBtn4" class="buyBtns" onclick="buyColor4();">BUY</button>
+      </div>
+      <div id="shopContainer">
+        <div id="category1" onclick="birdColorBlock();">Bird Color</div>
+        <div id="category2" onclick="backgroundBlock();">Background</div>
+      </div>
+      <div class="shopItemsB" id="item01">
+        <p id="priceItem01" class="priceB">By Default</p>
+        <button id="buyBtn01" class="buyBtnsB" onclick="buyBackground1();">USE</button>
+      </div>
+      <div class="shopItemsB" id="item02">
+        <p id="priceItem02" class="priceB">800 Score</p>
+        <button id="buyBtn02" class="buyBtnsB" onclick="buyBackground2();">BUY</button>
+      </div>
+      <div class="shopItemsB" id="item03">
+        <p id="priceItem03" class="priceB">1400 score</p>
+        <button id="buyBtn03" class="buyBtnsB" onclick="buyBackground3();">BUY</button>
+      </div>
+      <div class="shopItemsB" id="item04">
+        <p id="priceItem04" class="priceB">2000 score</p>
+        <button id="buyBtn04" class="buyBtnsB" onclick="buyBackground4();">BUY</button>
+      </div>
+    </div>
+    <!-- OPTIONS -->
+    <div class="blocks" id="optionBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">OPTIONS</h2>
+      <p id="option1">Select Difficulty</p>
+      <select id="option01">
+        <option>Easy</option>
+        <option>Mediam</option>
+        <option>Hard</option>
+        <option>Expert</option>
+      </select>
+      <p id="option2">Acrade Mode</p>
+      <div class="toggleBtn" id="acradeBtn" onclick="acradeMode();"><div class="toggleBtnCircle" id="toggleBtnCircle4"></div></div>
+     
+    </div>
+    
+    <!-- CREDIT -->
+    <div class="blocks" id="creditBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">CREDIT</h2>
+      <p class="creditText" id="text1">
+        <b>Developed by Ansh Softwares<br>
+        Thanks for playing Fly Bird!</b><br><br><br><br><br><br><br><br>
+        For feedback or support,<br>
+        contact: anshsoftwares@gmail.com</p>
+      <!-- <p class="creditText">Developer : Ansh Verma</p>
+      <p class="creditText">Thank You For Playing.</p> -->
+    </div>
+    <!-- SETTING -->
+    <div class="blocks" id="settingBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">SETTINGS</h2>
+      <p class="settingText" id="settingText1">Sound</p>
+      <div class="toggleBtn" id="toggleBtn1" onclick="toggleBtn01();"><div class="toggleBtnCircle" id="toggleBtnCircle1"></div></div>
+      <p class="settingText" id="settingText2">Music</p>    
+      <div class="toggleBtn" id="toggleBtn2" onclick="toggleBtn02();"><div class="toggleBtnCircle" id="toggleBtnCircle2"></div></div>
+      <p class="settingText" id="settingText3">Vibrate</p>
+      <div class="toggleBtn" id="toggleBtn3" onclick="toggleBtn03();"><div class="toggleBtnCircle" id="toggleBtnCircle3"></div></div>
+      <p class="settingText" id="settingText4">Reset Game</p> 
+      <button id="resetBtn" onclick="resetGame();">Reset</button>
+    </div>
+    <!-- message --> 
+    <span id="message">USING</span>
+    <span id="message2">Not Enough Score</span>
+    <span id="message3">Game Reset</span>
+    <!-- Profile -->
+    <div id="profileBlock">
+      <i class="fa-solid fa-arrow-left" id="closeProfileBlock" onclick="closeBlocks();"></i>
+      <div id="profilePic"></div>
+      <p id="name">Player</p>
+      <div class="edit"><i class="fa-solid fa-pencil" onclick="profilePicsBlock();"></i></div>
+      <div class="edit" id="edit2" onclick="enterNameBlock();"><i class="fa-solid fa-pencil"></i></div>
+      <table id="profileData"  border="1">
+        <tr>
+          <td>Total Score</td>
+          <td id="scoreValue2">0</td>
+        </tr>
+        <tr>
+          <td>Max Score</td>
+          <td id="highScoreVal">0</td>
+        </tr>
+      </table>    
+      <div id="achivement">
+        <div class="rewards" id="reward1"></div>
+        <div class="rewards" id="reward2"></div>
+        <div class="rewards" id="reward3"></div>
+        <div class="rewards" id="reward4"></div>
+        <p id="textAchivement">no achivement</p>
+      </div>
+      <div id="enterNameBox">
+        <input type="text" id="enterName" maxlength="10" placeholder="Enter Your Name">
+        <button id="ok" onclick="saveName();">Save</button>
+      </div>
+      <div id="profilePicBlock">
+        <div id="picsBlock">
+          <div class="profilePics" id="profilePic1" onclick="selectProfilePic1();"></div>
+          <div class="profilePics" id="profilePic2" onclick="selectProfilePic2();"></div>
+          <div class="profilePics" id="profilePic3" onclick="selectProfilePic3();"></div>
+          <div class="profilePics" id="profilePic4" onclick="selectProfilePic4();"></div>
+          <div class="profilePics" id="profilePic5" onclick="selectProfilePic5();"></div>
+          <div class="profilePics" id="profilePic6" onclick="selectProfilePic6();"></div>
+          <div class="profilePics" id="profilePic7" onclick="selectProfilePic7();"></div>
+          <div class="profilePics" id="profilePic8" onclick="selectProfilePic8();"></div>
+        </div>
+        <button id="ok2" onclick="closeProfilePics();">Save</button>
+     </div>
+    </div>
+    <div id="backgroundEffect" onclick="closeBlocks();"></div>
+    <div class="newBlocks" id="newBlockA">
+      <i class="fa-solid fa-arrow-left backArrow backArrowNewBlock" onclick="closeBlocks();"></i>
+      <h1 class="newBlocksTitles">TERMS & CONDITIONS</h1>
+      <div id="privacyBox">
+        <p class="paragraph" id="paragraph1">
+          <b>Effective Date: 2026-01-01</b><br><br>
+By downloading or using the Fly Bird game, you agree to these Terms & Conditions. If you do not agree with any part of these terms, please do not use the game.
+        </p>
+          <h2 class="termsTitles">Use of the App</h2>
+        <p class="paragraph" id="paragraph1">
+Fly Bird is provided free of charge.
+You are allowed to use the game for personal and non-commercial purposes only.
+You may not copy, modify, distribute, or reverse engineer the game.
+        </p>
+        <h2 class="termsTitles">Intellectual Property</h2>
+        <p class="paragraph" id="paragraph1">
+All content in the Fly Bird game, including:<br>
+• Game design<br>
+• Graphics<br>
+• Sounds<br>
+• Logo<br>
+• Source code<br>
+is the property of Ansh Softwares unless stated otherwise.
+You may not reuse or redistribute any part of the game without permission.
+        </p>
+        <h2 class="termsTitles">User Responsibilities</h2>
+        <p class="paragraph" id="paragraph1">You agree:
+Not to misuse the app
+Not to attempt to hack, exploit, or disrupt the game
+Not to use the app for any illegal activities
+        </p>
+<h2 class="termsTitles">Limitation of Liability</h2>
+        <p class="paragraph" id="paragraph1">
+Fly Bird is provided “as is”.
+We are not responsible for:
+Any loss or damage caused by using the app
+Any issues caused by third-party ads or services
+Temporary unavailability or bugs
+Use the app at your own risk.
+        </p>
+<h2 class="termsTitles">Termination</h2>
+        <p class="paragraph" id="paragraph1">
+We may stop providing the game or terminate access at any time without prior notice if these Terms are violated.
+        </p>
+          <h2 class="termsTitles">Changes to These Terms</h2>
+        <p class="paragraph" id="paragraph1">
+We may update these Terms & Conditions from time to time.
+Continued use of the game after changes means you accept the updated terms.
+        </p>
+        <h2 class="termsTitles">Contact Us</h2>
+        <p class="paragraph" id="paragraph1">
+If you have any questions about these Terms & Conditions, you can contact us:<br>
+📧 Email: anshsoftwares[dot]gmail[dot]com<br>
+🌐 Website: bit.ly/anshportfolios<br>
+        </p>
+      </div>
+    </div>
+    
+    <div class="newBlocks" id="newBlockB">
+      <i class="fa-solid fa-arrow-left backArrow backArrowNewBlock" onclick="closeBlocks();"></i>
+      <h1 class="newBlocksTitles">PRIVACY POLICY</h1>
+      <div id="termsBox">
+      <p class="paragraph" id="paragraph1">
+        <b>Effective Date: 2026-01-01</b><br><br>
+Fly Bird is a free game developed by Ansh Softwares. This game is provided at no cost and is intended for use as is.
+This page is used to inform users regarding our policies with the collection, use, and disclosure of Personal Information if anyone decides to use our game.</p>
+      <h2 class="termsTitles">Information Collection and Use</h2>
+      <p class="paragraph" id="paragraph2">
+Fly Bird does not collect any personally identifiable information such as name, email address, phone number, or location.
+      </p>
+      <h2 class="termsTitles">Cookies</h2>
+      <p class="paragraph" id="paragraph3">Fly Bird itself does not use cookies.
+      </p>
+      <h2 class="termsTitles">Children’s Privacy</h2>
+      <p class="paragraph" id="paragraph4">
+Fly Bird does not knowingly collect personal information from children under the age of 13.
+If you believe that a child has provided personal information, please contact us and we will remove it immediately.
+      </p>
+      <h2 class="termsTitles">Changes to This Privacy Policy</h2>
+      <p class="paragraph" id="paragraph5">We may update our Privacy Policy from time to time.
+You are advised to review this page periodically for any changes.
+      </p>
+      <h2 class="termsTitles">Contact Us</h2>
+      <p class="paragraph" id="paragraph6">If you have any questions or suggestions about this Privacy Policy, feel free to contact us:<br>
+📧 Email: anshsoftwares[dot]gmail[dot]com<br>
+🌐 Website: bit.ly/anshportfolios
+      </p>
+      </div>
+    </div>
+  </section>
+  <section>
+      <div id="footer">
+        Fly Bird Developed By Ansh
+      </div>
+  </section>
+  <script src="flyBirdGameJs.js"></script>
+</body>
+</html>
