@@ -729,8 +729,8 @@ function resetGame() {
     localStorage.setItem("score2",0);
     message3.style.visibility = "visible";
     localStorage.setItem("profilePic","profile2.jpg");
-    navProfile.style.background = `url(${localStorage.getItem('profilePic')})`;
-    profilePic.style.background = `url(${localStorage.getItem('profilePic')})`;
+    navProfile.style.background = "url('profile2.jpg')";
+    profilePic.style.background =  "url('profile2.jpg')";
     navProfile.style.backgroundSize = "cover";
     profilePic.style.backgroundSize = "cover";
     localStorage.setItem("background","Background01.png");
