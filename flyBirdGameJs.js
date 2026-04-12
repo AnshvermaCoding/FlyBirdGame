@@ -98,8 +98,12 @@ let prevScore;
 let color;
 //localStorage.setItem("newGame","true");
 //localStorage.setItem("newGame2","true");
+alert("before if");
+alert(localStorage.getItem("newGame"));
 if(!localStorage.getItem("newGame")) {
     console.log("new");
+    alert("after if");
+    alert(localStorage.getItem("newGame"));
     newGame = "false";
     localStorage.setItem("newGame","false");
     localStorage.setItem("scoreIs",0);
