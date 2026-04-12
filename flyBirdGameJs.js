@@ -57,6 +57,7 @@ let newBlock2 = document.querySelector("#newBlockB");
 
 if(!localStorage.getItem("view"))  {
     localStorage.setItem("view","true");
+    resetGame();
 }
 
 setInterval(() => {
@@ -98,12 +99,9 @@ let prevScore;
 let color;
 //localStorage.setItem("newGame","true");
 //localStorage.setItem("newGame2","true");
-alert("before if");
-alert(localStorage.getItem("newGame"));
+
 if(!localStorage.getItem("newGame")) {
-    console.log("new");
-    alert("after if");
-    alert(localStorage.getItem("newGame"));
+    // console.log("new");
     newGame = "false";
     localStorage.setItem("newGame","false");
     localStorage.setItem("scoreIs",0);
@@ -149,6 +147,7 @@ color = localStorage.getItem("color");
     }
 },50);
 */
+
 if(localStorage.getItem("save") === "true") {
     localStorage.setItem("score1",(parseInt(localStorage.getItem("score1")) + parseInt(localStorage.getItem("saveScore"))));
     scoreValue.innerText = localStorage.getItem("score1");
