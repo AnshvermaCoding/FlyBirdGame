@@ -56,7 +56,6 @@ let newBlock1 = document.querySelector("#newBlockA");
 let newBlock2 = document.querySelector("#newBlockB");
 if(!localStorage.getItem("view"))  {
     localStorage.setItem("view","true");
-    alert("view");
 }
 
 setInterval(() => {
