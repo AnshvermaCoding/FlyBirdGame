@@ -58,7 +58,6 @@ let newBlock2 = document.querySelector("#newBlockB");
 if(!localStorage.getItem("view"))  {
     localStorage.setItem("view","true");
     resetGame();
-    alert("run");
 }
 
 setInterval(() => {
