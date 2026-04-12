@@ -54,10 +54,9 @@ let footer = document.querySelector("#footer");
 let backgroundEffect = document.querySelector("#backgroundEffect");
 let newBlock1 = document.querySelector("#newBlockA");
 let newBlock2 = document.querySelector("#newBlockB");
-location.reload();
 if(!localStorage.getItem("view"))  {
     localStorage.setItem("view","true");
-    resetGame();
+    alert("view");
 }
 
 setInterval(() => {
@@ -128,6 +127,7 @@ if(!localStorage.getItem("newGame")) {
     localStorage.setItem("soundIs","true");
     localStorage.setItem("musicIs","true");
     localStorage.setItem("vibrateIs","true");
+    resetGame();
 }
 
 navProfile.style.background = `url(${localStorage.getItem('profilePic')})`;
