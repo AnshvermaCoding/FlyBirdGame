@@ -127,6 +127,15 @@ if(!localStorage.getItem("newGame")) {
     localStorage.setItem("soundIs","true");
     localStorage.setItem("musicIs","true");
     localStorage.setItem("vibrateIs","true");
+    navProfile.style.background = `url(${localStorage.getItem('profilePic')})`;
+profilePic.style.background = `url(${localStorage.getItem('profilePic')})`;
+navProfile.style.backgroundSize = "cover";
+profilePic.style.backgroundSize = "cover";
+background.style.background = `url(${localStorage.getItem("background")})`;
+background.style.backgroundSize = "cover";
+    scoreValue.innerText = localStorage.getItem("score2");
+    scoreValue2.innerText = localStorage.getItem("score2");
+    highScoreVal.innerText = localStorage.getItem("score2");
     resetGame();
 }
 
