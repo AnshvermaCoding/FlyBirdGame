@@ -259,6 +259,13 @@ You are advised to review this page periodically for any changes.
         Fly Bird Developed By Ansh
       </div>
   </section>
+  <script>
+    if (!localStorage.getItem("desktopModeNotice2")) {
+    alert("📱 Please Enable Desktop Mode\n\nThis website works best on mobile with Desktop Mode enabled.\n\n💻 Laptop/desktop support is coming soon.");
+
+    localStorage.setItem("desktopModeNotice2", "shown");
+    }
+  </script>
   <script src="flyBirdGameJs.js"></script>
 </body>
 </html>
